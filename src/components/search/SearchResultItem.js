@@ -1,14 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
-class SearchResultItem extends Component {
-  render() {
-    return (
-      <li>
-        Application: {this.props.application}, Location Description:{" "}
-        {this.props.locationDesc}, Distance: {this.props.distance}
-      </li>
-    );
-  }
-}
+const SearchResultItem = ({ application, locationDesc, distance }) => {
+  const itemDisplayText = `Application: ${application}, Location Description: ${locationDesc}, Distance:${" "}
+  ${distance}`;
+
+  return <li>{itemDisplayText}</li>;
+};
 
 export default SearchResultItem;
